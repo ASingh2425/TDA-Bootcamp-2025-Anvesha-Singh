@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Top Thriller Movies of All Time</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #0F0F0F;
+            --secondary: #1F1F1F;
+            --accent: #FF3C38;
+            --text: #EEEEEE;
+        }
+
+        body {
+            margin: 0;
+            background-color: var(--primary);
+            color: var(--text);
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--accent);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 10px;
+            margin-top: 50px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        ul li {
+            background: var(--secondary);
+            padding: 15px 20px;
+            border-radius: 10px;
+            flex: 1 1 200px;
+            transition: transform 0.3s ease;
+        }
+
+        ul li:hover {
+            transform: scale(1.05);
+            background: var(--accent);
+            color: var(--primary);
+        }
+
+        .poster {
+            width: 100%;
+            max-width: 300px;
+            display: block;
+            margin: 30px auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+        }
+
+        table, th, td {
+            border: 1px solid var(--accent);
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background: var(--accent);
+            color: var(--primary);
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Top Thriller Movies of All Time 🎥</h1>
+
+        <p>A curated list of mind-bending, edge-of-your-seat thrillers you absolutely need to experience.</p>
+
+        <h2>Must-Watch Thrillers</h2>
+        <ul>
+            <li>Se7en (1995)</li>
+            <li>Gone Girl (2014)</li>
+            <li>Shutter Island (2010)</li>
+            <li>The Silence of the Lambs (1991)</li>
+            <li>Fight Club (1999)</li>
+            <li>Oldboy (2003)</li>
+            <li>Prisoners (2013)</li>
+            <li>Memento (2000)</li>
+        </ul>
+
+        <img class="poster" src="Shutterislandposter.jpg" alt="Shutter Island Movie Poster">
+
+        <h2>Classic Thriller Highlights</h2>
+        <table>
+            <tr>
+                <th>Movie</th>
+                <th>Director</th>
+                <th>Year</th>
+            </tr>
+            <tr>
+                <td>Se7en</td>
+                <td>David Fincher</td>
+                <td>1995</td>
+            </tr>
+            <tr>
+                <td>Gone Girl</td>
+                <td>David Fincher</td>
+                <td>2014</td>
+            </tr>
+            <tr>
+                <td>The Silence of the Lambs</td>
+                <td>Jonathan Demme</td>
+                <td>1991</td>
+            </tr>
+            <tr>
+                <td>Shutter Island</td>
+                <td>Martin Scorsese</td>
+                <td>2010</td>
+            </tr>
+        </table>
+
+        <p style="margin-top: 30px;">For more awesome thrillers, visit <a href="https://www.imdb.com/search/title/?genres=thriller" target="_blank">IMDb Thriller List</a>.</p>
+
+        <div class="footer">
+            &copy; 2025 Top Thriller Movie Picks | Designed with 🎬 and suspense.
+        </div>
+    </div>
+
+</body>
+</html>
