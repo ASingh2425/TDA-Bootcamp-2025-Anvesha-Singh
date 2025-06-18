@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive CSS Grid Layout</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #1a202c 0%, #2d3748 50%, #4a5568 100%);
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: white;
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 300px);
+      gap: 2rem;
+      padding: 2rem;
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .grid-item {
+      background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+      border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .grid-item::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent);
+      transform: rotate(45deg);
+      transition: all 0.5s;
+      opacity: 0;
+    }
+
+    .grid-item:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+
+    .grid-item:hover::before {
+      opacity: 1;
+      top: -10%;
+      left: -10%;
+    }
+
+    .grid-item:nth-child(1) {
+      background: linear-gradient(45deg, #e53e3e, #fc8181);
+    }
+
+    .grid-item:nth-child(2) {
+      background: linear-gradient(45deg, #38b2ac, #81e6d9);
+    }
+
+    .grid-item:nth-child(3) {
+      background: linear-gradient(45deg, #805ad5, #b794f6);
+    }
+
+    .grid-item:nth-child(4) {
+      background: linear-gradient(45deg, #3182ce, #90cdf4);
+    }
+
+    .grid-item:nth-child(5) {
+      background: linear-gradient(45deg, #d69e2e, #f6e05e);
+    }
+
+    .grid-item:nth-child(6) {
+      background: linear-gradient(45deg, #38a169, #9ae6b4);
+    }
+
+    .item-number {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      opacity: 0.85;
+    }
+
+    .item-title {
+      font-size: 1.1rem;
+      text-align: center;
+      opacity: 0.9;
+    }
+
+    /* 📱 Tablet (≤768px): 2 columns */
+    @media (max-width: 768px) {
+      .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 250px);
+        gap: 1.5rem;
+        padding: 1.5rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+    }
+
+    /* 📱 Mobile (≤480px): 1 column */
+    @media (max-width: 480px) {
+      .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 200px);
+        gap: 1rem;
+        padding: 1rem;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      body {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Responsive Color Palette Grid</h1>
+
+    <div class="grid-container">
+      <div class="grid-item">
+        <div class="item-number">1</div>
+        <div class="item-title">Ruby Fire</div>
+      </div>
+      <div class="grid-item">
+        <div class="item-number">2</div>
+        <div class="item-title">Teal Wave</div>
+      </div>
+      <div class="grid-item">
+        <div class="item-number">3</div>
+        <div class="item-title">Violet Storm</div>
+      </div>
+      <div class="grid-item">
+        <div class="item-number">4</div>
+        <div class="item-title">Azure Sky</div>
+      </div>
+      <div class="grid-item">
+        <div class="item-number">5</div>
+        <div class="item-title">Golden Sun</div>
+      </div>
+      <div class="grid-item">
+        <div class="item-number">6</div>
+        <div class="item-title">Emerald Forest</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
