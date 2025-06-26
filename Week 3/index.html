@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chore Lore</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Chore Lore</h1>
+      <p class="tagline">Organize your chaos — one task at a time</p>
+    </header>
+
+    <section class="input-bar">
+      <input type="text" id="taskInput" placeholder="What's on your mind?" />
+      <button id="addTaskBtn">+</button>
+    </section>
+
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="completed">✓ Done</button>
+      <button class="filter-btn" data-filter="pending">⏳ Pending</button>
+    </div>
+
+    <ul id="taskList" class="task-list"></ul>
+
+    <footer>
+      <small>Built by Anvesha • Last updated <span id="date"></span></small>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
