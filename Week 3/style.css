@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'JetBrains Mono', monospace;
+  background-color: #121212;
+  color: #e4e4e4;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.app {
+  width: 100%;
+  max-width: 600px;
+  padding: 30px;
+  background: #1a1a1a;
+  border-radius: 16px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+header h1 {
+  font-size: 26px;
+  color: #00ffd5;
+  margin-bottom: 5px;
+}
+
+.tagline {
+  font-size: 13px;
+  color: #888;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.input-bar {
+  display: flex;
+  gap: 12px;
+}
+
+.input-bar input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 2px solid #333;
+  background: #252525;
+  color: #f5f5f5;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.input-bar input:focus {
+  border-color: #00ffd5;
+  background-color: #2d2d2d;
+}
+
+.input-bar button {
+  background: #00ffd5;
+  color: #121212;
+  border: none;
+  padding: 10px 16px;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.input-bar button:hover {
+  background: #00c6aa;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+}
+
+.filter-btn {
+  background: #2e2e2e;
+  color: #ccc;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background-color: #00ffd5;
+  color: #121212;
+}
+
+.task-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.task-list li {
+  background: #242424;
+  border: 1px solid #333;
+  padding: 12px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s;
+}
+
+.task-list li:hover {
+  background: #2f2f2f;
+}
+
+.task-list li.completed {
+  text-decoration: line-through;
+  color: #777;
+}
+
+.task-list li button {
+  background: crimson;
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.task-list li button:hover {
+  background: darkred;
+}
+
+footer {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 11px;
+  color: #666;
+}
