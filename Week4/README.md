@@ -6,7 +6,8 @@ A modern, aesthetic, and responsive Netflix landing page clone built using **Rea
 
 ## 📸 Preview
 
-![Netflix Clone Preview](src/assets/netflix-logo-icon.png)
+<img width="1886" height="960" alt="image" src="https://github.com/user-attachments/assets/375cb1dd-ecd3-46f1-ad01-4d23785c9e72" />
+
 
 ---
 
